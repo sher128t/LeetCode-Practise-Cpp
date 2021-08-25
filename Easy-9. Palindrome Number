@@ -1,0 +1,13 @@
+class Solution {
+public:
+    bool isPalindrome(int x) {
+        string answer = to_string(x);
+        reverse(answer.begin(), answer.end());
+        if (to_string(x) == answer) {
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+};

@@ -1,0 +1,25 @@
+class Solution {
+public:
+    int reverse(int x) {
+        long long answer = 0;
+        bool isnegative = false;
+        if (x < 0) {
+            isnegative = true;
+            x  = abs(x);
+        }
+        while(x > 0) {
+            answer *= 10;
+            answer += x % 10;
+            x /= 10;
+        }
+        if (isnegative == true){
+            answer *= -1;
+        }
+        if (answer>-2147483648 && answer<2147483648){
+            return answer;
+        }
+        else{
+            return 0;
+        }
+    }
+};
